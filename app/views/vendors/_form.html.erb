@@ -1,0 +1,6 @@
+<%= form_for @vendor do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.collection_select :sweet_ids, Sweet.all, @sweets, :ids, {:prompt => "Please select Vendor"} %>
+    <%= f.submit %>
+    <% end %>
